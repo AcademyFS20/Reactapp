@@ -8,13 +8,8 @@ function Table(props){
 
     return(
         <>
-        
-
       
-      
-        
-      
-
+  
       
             <td class="p-3 font-medium capitalize">{props.id}</td>
             <td class="p-3">{props.title}</td>
@@ -29,7 +24,9 @@ function Table(props){
               <Button value="Update"/>
               <Button value="Delete"/>
             </td>
-          
+
+      
+            
       
     
  

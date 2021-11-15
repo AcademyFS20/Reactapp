@@ -4,6 +4,8 @@ import Table from "./components/tables/Table";
 import './index.css';
 import {dataBook} from "./helpers/Data";
 import Titletable from "./components/tables/Titletable";
+import Button from "./components/button/Button";
+import Form from "./container/Form";
 
 
 function App() {
@@ -12,10 +14,6 @@ function App() {
       
   	<Title/>
     <Titletable/>
-
-    
-    
-    
     <tbody>
 
       {dataBook.map(item=>(
@@ -27,11 +25,14 @@ function App() {
         category={item.category} />
 
       </tr>
+      
 
       ))}
+      <Button value="Create"/>
+      
     </tbody>
     
-              
+    <Form/>
             
 </div>
   );
