@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Title from "./components/Title";
+import Table from "./components/tables/Table";
+import './index.css';
+import {dataBook} from "./helpers/Data";
+import Titletable from "./components/tables/Titletable";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="page">
+      
+  	<Title/>
+    <Titletable/>
+
+    
+    
+    
+    <tbody>
+
+      {dataBook.map(item=>(
+        <tr key={item.id}>
+        <Table id={item.id}
+         title={item.title}
+        author={item.author}
+        nbpages={item.nbpages}
+        category={item.category} />
+
+      </tr>
+
+      ))}
+    </tbody>
+    
+              
+            
+</div>
   );
 }
 
